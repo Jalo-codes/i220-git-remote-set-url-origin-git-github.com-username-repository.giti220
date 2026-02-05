@@ -1,0 +1,293 @@
++start hello bart lisa
+Temporary breakpoint 1 at 0x1192: file hello.c, line 17.
+Starting program: /import/home/jlomando/i220/submit/lab2-sol/lab2-sol/1-hello-args/hello hello bart lisa
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=4, argv=0x7fffffffdff8) at hello.c:17
+17	  if ((argc = 1)) {
++n
+18	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
++n
+19	    exit(1);
++n
+[Inferior 1 (process 1074261) exited with code 01]
++n
+The program is not being run.
++n
+The program is not being run.
++n
+The program is not being run.
++q
++f
+No stack.
++f
+No stack.
++n
+The program is not being run.
++hello bart lisa
+Undefined command: "hello".  Try "help".
++q
++start bart lisa
+Temporary breakpoint 1 at 0x1192: file hello.c, line 17.
+Starting program: /import/home/jlomando/i220/submit/lab2-sol/lab2-sol/1-hello-args/hello bart lisa
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffdff8) at hello.c:17
+17	  if ((argc = 1)) {
++f
+#0  main (argc=3, argv=0x7fffffffdff8) at hello.c:17
+17	  if ((argc = 1)) {
++argc p
+Undefined command: "argc".  Try "help".
++argc
+Undefined command: "argc".  Try "help".
++p argc
+$1 = 3
++n
+18	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
++n
+19	    exit(1);
++n
+[Inferior 1 (process 1074749) exited with code 01]
++q
++start bart lisa
+Temporary breakpoint 1 at 0x1192: file hello.c, line 17.
+Starting program: /import/home/jlomando/i220/submit/lab2-sol/lab2-sol/1-hello-args/hello bart lisa
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffdff8) at hello.c:17
+warning: Source file is more recent than executable.
+17	  if ((argc == 1)) {
++p name
+$1 = '\000' <repeats 32 times>
++n
+18	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
++p name
+$2 = '\000' <repeats 32 times>
++n
+19	    exit(1);
++n
+[Inferior 1 (process 1075283) exited with code 01]
++n
+The program is not being run.
++start bart lisa
+Temporary breakpoint 2 at 0x555555555192: file hello.c, line 17.
+Starting program: /import/home/jlomando/i220/submit/lab2-sol/lab2-sol/1-hello-args/hello bart lisa
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main (argc=3, argv=0x7fffffffdff8) at hello.c:17
+17	  if ((argc == 1)) {
++n
+18	    fprintf(stderr, "usage: %s NAME...\n", argv[0]);
++n
+19	    exit(1);
++q
++start bart lisa
+Temporary breakpoint 1 at 0x1192: file hello.c, line 17.
+Starting program: /import/home/jlomando/i220/submit/lab2-sol/lab2-sol/1-hello-args/hello bart lisa
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffdff8) at hello.c:17
+17	  if ((argc == 1)) {
++n
+22	    for (int i = 0; i <= argc; i++) {
++p name
+$1 = '\000' <repeats 32 times>
++n
+23	      say_hello(argv[i]);
++n
+22	    for (int i = 0; i <= argc; i++) {
++p name
+$2 = '\000' <repeats 32 times>
++p name
+$3 = '\000' <repeats 32 times>
++n
+23	      say_hello(argv[i]);
++p name
+$4 = '\000' <repeats 32 times>
++n
+22	    for (int i = 0; i <= argc; i++) {
++display name
+1: name = '\000' <repeats 32 times>
++n
+23	      say_hello(argv[i]);
+1: name = '\000' <repeats 32 times>
++n
+22	    for (int i = 0; i <= argc; i++) {
+1: name = '\000' <repeats 32 times>
++n
+23	      say_hello(argv[i]);
+1: name = '\000' <repeats 32 times>
++n
+22	    for (int i = 0; i <= argc; i++) {
+1: name = '\000' <repeats 32 times>
++n
+26	  return 0;
+1: name = '\000' <repeats 32 times>
++n
+27	}
+1: name = '\000' <repeats 32 times>
++backtrace
+#0  main (argc=3, argv=0x7fffffffdff8) at hello.c:27
++start bart lia
+Temporary breakpoint 2 at 0x555555555192: file hello.c, line 17.
+Starting program: /import/home/jlomando/i220/submit/lab2-sol/lab2-sol/1-hello-args/hello bart lia
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main (argc=3, argv=0x7fffffffdff8) at hello.c:17
+17	  if ((argc == 1)) {
+1: name = '\000' <repeats 32 times>
++n
+22	    for (int i = 0; i <= argc; i++) {
+1: name = '\000' <repeats 32 times>
++n
+23	      say_hello(argv[i]);
+1: name = '\000' <repeats 32 times>
++backtrace hello
+No symbol "hello" in current context.
++backtrace
+#0  main (argc=3, argv=0x7fffffffdff8) at hello.c:23
++backtrace
+#0  main (argc=3, argv=0x7fffffffdff8) at hello.c:23
++n
+22	    for (int i = 0; i <= argc; i++) {
+1: name = '\000' <repeats 32 times>
++n
+23	      say_hello(argv[i]);
+1: name = '\000' <repeats 32 times>
++n
+22	    for (int i = 0; i <= argc; i++) {
+1: name = '\000' <repeats 32 times>
++n
+23	      say_hello(argv[i]);
+1: name = '\000' <repeats 32 times>
++n
+22	    for (int i = 0; i <= argc; i++) {
+1: name = '\000' <repeats 32 times>
++n
+23	      say_hello(argv[i]);
+1: name = '\000' <repeats 32 times>
++n
+22	    for (int i = 0; i <= argc; i++) {
+1: name = '\000' <repeats 32 times>
++n
+26	  return 0;
+1: name = '\000' <repeats 32 times>
++n
+27	}
+1: name = '\000' <repeats 32 times>
++n
+__libc_start_call_main (main=main@entry=0x555555555183 <main>, argc=argc@entry=3, argv=argv@entry=0x7fffffffdff8) at ../sysdeps/nptl/libc_start_call_main.h:74
+74	../sysdeps/nptl/libc_start_call_main.h: No such file or directory.
+1: name = '\000' <repeats 32 times>
++q
++start bart lisa
+Temporary breakpoint 1 at 0x1192: file hello.c, line 17.
+Starting program: /import/home/jlomando/i220/submit/lab2-sol/lab2-sol/1-hello-args/hello bart lisa
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffdff8) at hello.c:17
+17	  if ((argc == 1)) {
++b sat_hello
+Function "sat_hello" not defined.
+Please answer y or [n].
+Breakpoint 2 (sat_hello) pending.
++b sat_hello
+Function "sat_hello" not defined.
++y
+Undefined command: "y".  Try "help".
++y
+Undefined command: "y".  Try "help".
++y
+Undefined command: "y".  Try "help".
++y
+Undefined command: "y".  Try "help".
++q
++start bart lisa
+Temporary breakpoint 1 at 0x1192: file hello.c, line 17.
+Starting program: /import/home/jlomando/i220/submit/lab2-sol/lab2-sol/1-hello-args/hello bart lisa
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffdff8) at hello.c:17
+17	  if ((argc == 1)) {
++b say_hello
+Breakpoint 2 at 0x555555555165: file hello.c, line 7.
++n
+22	    for (int i = 0; i <= argc; i++) {
++n
+23	      say_hello(argv[i]);
++n
+
+Breakpoint 2, say_hello (name=0x7fffffffe2ab "/import/home/jlomando/i220/submit/lab2-sol/lab2-sol/1-hello-args/hello") at hello.c:7
+7	  printf("hello %s\n", name);
++p name
+$1 = 0x7fffffffe2ab "/import/home/jlomando/i220/submit/lab2-sol/lab2-sol/1-hello-args/hello"
++display nam
+No symbol "nam" in current context.
++display name
+1: name = 0x7fffffffe2ab "/import/home/jlomando/i220/submit/lab2-sol/lab2-sol/1-hello-args/hello"
++n
+8	}
+1: name = 0x7fffffffe2ab "/import/home/jlomando/i220/submit/lab2-sol/lab2-sol/1-hello-args/hello"
++n
+main (argc=3, argv=0x7fffffffdff8) at hello.c:22
+22	    for (int i = 0; i <= argc; i++) {
++n
+23	      say_hello(argv[i]);
++n
+
+Breakpoint 2, say_hello (name=0x7fffffffe2f2 "bart") at hello.c:7
+7	  printf("hello %s\n", name);
+1: name = 0x7fffffffe2f2 "bart"
++n
+8	}
+1: name = 0x7fffffffe2f2 "bart"
++n
+main (argc=3, argv=0x7fffffffdff8) at hello.c:22
+22	    for (int i = 0; i <= argc; i++) {
++n
+23	      say_hello(argv[i]);
++n
+
+Breakpoint 2, say_hello (name=0x7fffffffe2f7 "lisa") at hello.c:7
+7	  printf("hello %s\n", name);
+1: name = 0x7fffffffe2f7 "lisa"
++n
+8	}
+1: name = 0x7fffffffe2f7 "lisa"
++n
+main (argc=3, argv=0x7fffffffdff8) at hello.c:22
+22	    for (int i = 0; i <= argc; i++) {
++n
+23	      say_hello(argv[i]);
++n
+
+Breakpoint 2, say_hello (name=0x0) at hello.c:7
+7	  printf("hello %s\n", name);
+1: name = 0x0
++n
+8	}
+1: name = 0x0
++n
+main (argc=3, argv=0x7fffffffdff8) at hello.c:22
+22	    for (int i = 0; i <= argc; i++) {
++n
+26	  return 0;
++n
+27	}
++n
+__libc_start_call_main (main=main@entry=0x555555555183 <main>, argc=argc@entry=3, argv=argv@entry=0x7fffffffdff8) at ../sysdeps/nptl/libc_start_call_main.h:74
+74	../sysdeps/nptl/libc_start_call_main.h: No such file or directory.
++backtrace
+#0  __libc_start_call_main (main=main@entry=0x555555555183 <main>, argc=argc@entry=3, argv=argv@entry=0x7fffffffdff8) at ../sysdeps/nptl/libc_start_call_main.h:74
+#1  0x00007ffff7ddf305 in __libc_start_main_impl (main=0x555555555183 <main>, argc=3, argv=0x7fffffffdff8, init=<optimized out>, fini=<optimized out>, rtld_fini=<optimized out>, stack_end=0x7fffffffdfe8) at ../csu/libc-start.c:360
+#2  0x0000555555555091 in _start ()
++q

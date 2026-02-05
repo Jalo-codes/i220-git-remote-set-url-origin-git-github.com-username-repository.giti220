@@ -1,0 +1,614 @@
++start Bart baby Lisa
+Temporary breakpoint 1 at 0x12c6: file hello.c, line 35.
+Starting program: /import/home/jlomando/i220/submit/lab2-sol/lab2-sol/2-hello-upcase-args/hello Bart baby Lisa
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=4, argv=0x7fffffffdfe8) at hello.c:35
+35	  if (argc == 1) {
++n
+40	    for (int i = 1; i < argc; i++) {
++b upercase_words
+Function "upercase_words" not defined.
++b upercase_words
+Function "upercase_words" not defined.
++n
+41	      const char *name = argv[i];
++n
+42	      char friendlyName[strlen(name)];
++n
+43	      upcase_words(name, friendlyName);
++n
+44	      say_hello(friendlyName);
++n
+40	    for (int i = 1; i < argc; i++) {
++n
+41	      const char *name = argv[i];
++n
+42	      char friendlyName[strlen(name)];
++n
+43	      upcase_words(name, friendlyName);
++n
+44	      say_hello(friendlyName);
++n
+40	    for (int i = 1; i < argc; i++) {
++n
+41	      const char *name = argv[i];
++n
+42	      char friendlyName[strlen(name)];
++n
+43	      upcase_words(name, friendlyName);
++n
+44	      say_hello(friendlyName);
++n
+40	    for (int i = 1; i < argc; i++) {
++n
+47	  return 0;
++n
+48	}
++n
+__libc_start_call_main (main=main@entry=0x5555555552ae <main>, argc=argc@entry=4, argv=argv@entry=0x7fffffffdfe8) at ../sysdeps/nptl/libc_start_call_main.h:74
+74	../sysdeps/nptl/libc_start_call_main.h: No such file or directory.
++n
+[Inferior 1 (process 1085181) exited normally]
++n
+The program is not being run.
++start Bart Lisa AHHH boo
+Temporary breakpoint 2 at 0x5555555552c6: file hello.c, line 35.
+Starting program: /import/home/jlomando/i220/submit/lab2-sol/lab2-sol/2-hello-upcase-args/hello Bart Lisa AHHH boo
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 2, main (argc=5, argv=0x7fffffffdfc8) at hello.c:35
+35	  if (argc == 1) {
++b upcase_words
+Breakpoint 3 at 0x555555555199: file hello.c, line 13.
++n
+40	    for (int i = 1; i < argc; i++) {
++n
+41	      const char *name = argv[i];
++n
+42	      char friendlyName[strlen(name)];
++n
+43	      upcase_words(name, friendlyName);
++p in
+No symbol "in" in current context.
++p in
+No symbol "in" in current context.
++n
+
+Breakpoint 3, upcase_words (in=0x7fffffffe2db "Bart", out=0x7fffffffde40 "\001") at hello.c:13
+13	  int inWord = 0;
++p in
+$1 = 0x7fffffffe2db "Bart"
++p in
+$2 = 0x7fffffffe2db "Bart"
++p in
+$3 = 0x7fffffffe2db "Bart"
++n
+14	  int n = strlen(in);
++n
+15	  for (int i = 0; i < n; i++) {
++n
+16	    if (!inWord && isalpha(in[i])) {
++n
+17	      out[i] = toupper(in[i]);
++n
+22	    inWord = isalpha(in[i]);
++n
+15	  for (int i = 0; i < n; i++) {
++n
+16	    if (!inWord && isalpha(in[i])) {
++n
+20	      out[i] = in[i];
++name in
+Undefined command: "name".  Try "help".
++display in
+1: in = 0x7fffffffe2db "Bart"
++m
+Ambiguous command "m": macro, maintenance, make, mem, memory-tag, monitor, mt.
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2db "Bart"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2db "Bart"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2db "Bart"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2db "Bart"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2db "Bart"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2db "Bart"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2db "Bart"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2db "Bart"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2db "Bart"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2db "Bart"
++n
+24	}
+1: in = 0x7fffffffe2db "Bart"
++n
+main (argc=5, argv=0x7fffffffdfc8) at hello.c:44
+44	      say_hello(friendlyName);
++n
+40	    for (int i = 1; i < argc; i++) {
++n
+41	      const char *name = argv[i];
++n
+42	      char friendlyName[strlen(name)];
++n
+43	      upcase_words(name, friendlyName);
++n
+
+Breakpoint 3, upcase_words (in=0x7fffffffe2e0 "Lisa", out=0x7fffffffde40 "Bart") at hello.c:13
+13	  int inWord = 0;
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+14	  int n = strlen(in);
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e0 "Lisa"
++nn
+Undefined command: "nn".  Try "help".
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+17	      out[i] = toupper(in[i]);
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+24	}
+1: in = 0x7fffffffe2e0 "Lisa"
++n
+main (argc=5, argv=0x7fffffffdfc8) at hello.c:44
+44	      say_hello(friendlyName);
++n
+40	    for (int i = 1; i < argc; i++) {
++n
+41	      const char *name = argv[i];
++n
+42	      char friendlyName[strlen(name)];
++n
+43	      upcase_words(name, friendlyName);
++n
+
+Breakpoint 3, upcase_words (in=0x7fffffffe2e5 "AHHH", out=0x7fffffffde40 "Lisa") at hello.c:13
+13	  int inWord = 0;
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+14	  int n = strlen(in);
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+17	      out[i] = toupper(in[i]);
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+24	}
+1: in = 0x7fffffffe2e5 "AHHH"
++n
+main (argc=5, argv=0x7fffffffdfc8) at hello.c:44
+44	      say_hello(friendlyName);
++n
+40	    for (int i = 1; i < argc; i++) {
++n
+41	      const char *name = argv[i];
++n
+42	      char friendlyName[strlen(name)];
++n
+43	      upcase_words(name, friendlyName);
++n
+
+Breakpoint 3, upcase_words (in=0x7fffffffe2ea "boo", out=0x7fffffffde40 "AHHH") at hello.c:13
+13	  int inWord = 0;
+1: in = 0x7fffffffe2ea "boo"
++n
+14	  int n = strlen(in);
+1: in = 0x7fffffffe2ea "boo"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2ea "boo"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2ea "boo"
++n
+17	      out[i] = toupper(in[i]);
+1: in = 0x7fffffffe2ea "boo"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2ea "boo"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2ea "boo"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2ea "boo"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2ea "boo"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2ea "boo"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2ea "boo"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2ea "boo"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2ea "boo"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2ea "boo"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2ea "boo"
++n
+24	}
+1: in = 0x7fffffffe2ea "boo"
++n
+main (argc=5, argv=0x7fffffffdfc8) at hello.c:44
+44	      say_hello(friendlyName);
++n
+40	    for (int i = 1; i < argc; i++) {
++n
+47	  return 0;
++n
+48	}
++n
+__libc_start_call_main (main=main@entry=0x5555555552ae <main>, argc=argc@entry=5, argv=argv@entry=0x7fffffffdfc8) at ../sysdeps/nptl/libc_start_call_main.h:74
+74	../sysdeps/nptl/libc_start_call_main.h: No such file or directory.
++q
++start hi hi
+Temporary breakpoint 1 at 0x12c6: file hello.c, line 35.
+Starting program: /import/home/jlomando/i220/submit/lab2-sol/lab2-sol/2-hello-upcase-args/hello hi hi
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 1, main (argc=3, argv=0x7fffffffdfe8) at hello.c:35
+35	  if (argc == 1) {
++b upcase_words
+Breakpoint 2 at 0x555555555199: file hello.c, line 13.
++n
+40	    for (int i = 1; i < argc; i++) {
++n
+41	      const char *name = argv[i];
++n
+42	      char friendlyName[strlen(name)];
++n
+43	      upcase_words(name, friendlyName);
++n
+
+Breakpoint 2, upcase_words (in=0x7fffffffe2e8 "hi", out=0x7fffffffde60 "\001") at hello.c:13
+13	  int inWord = 0;
++name in
+Undefined command: "name".  Try "help".
++display in
+1: in = 0x7fffffffe2e8 "hi"
++n
+14	  int n = strlen(in);
+1: in = 0x7fffffffe2e8 "hi"
++p n
+$1 = 0
++p n
+$2 = 0
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e8 "hi"
++p n
+$3 = 2
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e8 "hi"
++n
+17	      out[i] = toupper(in[i]);
+1: in = 0x7fffffffe2e8 "hi"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2e8 "hi"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e8 "hi"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e8 "hi"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2e8 "hi"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2e8 "hi"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e8 "hi"
++n
+24	}
+1: in = 0x7fffffffe2e8 "hi"
++n
+main (argc=3, argv=0x7fffffffdfe8) at hello.c:44
+44	      say_hello(friendlyName);
++n
+40	    for (int i = 1; i < argc; i++) {
++n
+41	      const char *name = argv[i];
++n
+42	      char friendlyName[strlen(name)];
++n
+43	      upcase_words(name, friendlyName);
++n
+
+Breakpoint 2, upcase_words (in=0x7fffffffe2eb "hi", out=0x7fffffffde60 "Hi") at hello.c:13
+13	  int inWord = 0;
+1: in = 0x7fffffffe2eb "hi"
++n
+14	  int n = strlen(in);
+1: in = 0x7fffffffe2eb "hi"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2eb "hi"
++p n
+$4 = 2
++p n
+$5 = 2
++m
+Ambiguous command "m": macro, maintenance, make, mem, memory-tag, monitor, mt.
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2eb "hi"
++n
+17	      out[i] = toupper(in[i]);
+1: in = 0x7fffffffe2eb "hi"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2eb "hi"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2eb "hi"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2eb "hi"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2eb "hi"
++nn
+Undefined command: "nn".  Try "help".
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2eb "hi"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2eb "hi"
++n
+24	}
+1: in = 0x7fffffffe2eb "hi"
++n
+main (argc=3, argv=0x7fffffffdfe8) at hello.c:44
+44	      say_hello(friendlyName);
++n
+40	    for (int i = 1; i < argc; i++) {
++n
+47	  return 0;
++n
+48	}
++n
+__libc_start_call_main (main=main@entry=0x5555555552ae <main>, argc=argc@entry=3, argv=argv@entry=0x7fffffffdfe8) at ../sysdeps/nptl/libc_start_call_main.h:74
+74	../sysdeps/nptl/libc_start_call_main.h: No such file or directory.
++start 'hi ab'
+Temporary breakpoint 3 at 0x5555555552c6: file hello.c, line 35.
+Starting program: /import/home/jlomando/i220/submit/lab2-sol/lab2-sol/2-hello-upcase-args/hello 'hi ab'
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib/x86_64-linux-gnu/libthread_db.so.1".
+
+Temporary breakpoint 3, main (argc=2, argv=0x7fffffffdff8) at hello.c:35
+35	  if (argc == 1) {
++b upcase_words
+Note: breakpoint 2 also set at pc 0x555555555199.
+Breakpoint 4 at 0x555555555199: file hello.c, line 13.
++n
+40	    for (int i = 1; i < argc; i++) {
++n
+41	      const char *name = argv[i];
++n
+42	      char friendlyName[strlen(name)];
++n
+43	      upcase_words(name, friendlyName);
++n
+
+Breakpoint 2, upcase_words (in=0x7fffffffe2e8 "hi ab", out=0x7fffffffde70 "\001") at hello.c:13
+13	  int inWord = 0;
+1: in = 0x7fffffffe2e8 "hi ab"
++n
+14	  int n = strlen(in);
+1: in = 0x7fffffffe2e8 "hi ab"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e8 "hi ab"
++p n
+$6 = 5
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e8 "hi ab"
++n
+17	      out[i] = toupper(in[i]);
+1: in = 0x7fffffffe2e8 "hi ab"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2e8 "hi ab"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e8 "hi ab"
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e8 "hi ab"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2e8 "hi ab"
++n
+22	    inWord = isalpha(in[i]);
+1: in = 0x7fffffffe2e8 "hi ab"
++n
+15	  for (int i = 0; i < n; i++) {
+1: in = 0x7fffffffe2e8 "hi ab"
++p i
+$7 = 1
++n
+16	    if (!inWord && isalpha(in[i])) {
+1: in = 0x7fffffffe2e8 "hi ab"
++n
+20	      out[i] = in[i];
+1: in = 0x7fffffffe2e8 "hi ab"
++pi
+  File "<stdin>", line 1
+    p i
+      ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'n' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'n' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'n' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'n' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'q' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'pi' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'p' is not defined
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'q' is not defined
+  File "<stdin>", line 1
+    !q
+    ^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    :q
+    ^
+SyntaxError: invalid syntax
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'q' is not defined
+  File "<stdin>", line 1
+    +
+     ^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    !
+    ^
+SyntaxError: invalid syntax
+  File "<stdin>", line 1
+    ~
+     ^
+SyntaxError: invalid syntax
